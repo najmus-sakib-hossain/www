@@ -1,12 +1,21 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
 	"vcs": {
-		"enabled": false,
+		"enabled": true,
 		"clientKind": "git",
-		"useIgnoreFile": false
+		"useIgnoreFile": true
 	},
 	"files": {
-		"ignoreUnknown": false
+		"ignoreUnknown": false,
+		"experimentalScannerIgnores": [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/build/**",
+			"**/.next/**",
+			"**/.next/**/**",
+			".next/**",
+			"**/out/**"
+		]
 	},
 	"formatter": {
 		"enabled": true,
