@@ -50,11 +50,11 @@ function BreadcrumbLink({
 }
 
 function BreadcrumbPage({ className, ...props }: React.ComponentProps<"span">) {
+	// Breadcrumb current page should not be given an interactive role.
+	// Use a semantic span with aria-current to indicate the active page.
 	return (
 		<span
 			data-slot="breadcrumb-page"
-			role="link"
-			aria-disabled="true"
 			aria-current="page"
 			className={cn("text-foreground font-normal", className)}
 			{...props}
